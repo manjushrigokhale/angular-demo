@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 60.0.3112 (Windows 8.1.0.0)" package="unit" timestamp="2018-05-24T09:03:25" id="0" hostname="shubhamgo" tests="3" errors="0" failures="0" time="0.004">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36"/>
+  </properties>
+  <testcase name="HelloTest checks if HelloTest is HelloTest" time="0.003" classname="unit.HelloTest"/>
+  <testcase name="HelloTest checks if Regex matches with Hello" time="0.001" classname="unit.HelloTest"/>
+  <testcase name="UserAccountsComponent should have as title 'Angular 5 App'" time="0" classname="unit.UserAccountsComponent">
+    <skipped/>
+  </testcase>
+  <system-out>
+    <![CDATA[Chrome 60.0.3112 (Windows 8.1.0.0) ERROR
+  Disconnectedundefined
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

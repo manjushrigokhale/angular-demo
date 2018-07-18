@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Angular</title>
+</head>
+<body >
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SuperUserPortal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Subscription</a></li>
+      <li><a href="#">PictoView</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="usermangemnentdahboard">
+<div class="header">
+
+<nav class="navbar">
+
+    <div class="navbar-header" >
+      <h4 class="nav-title">
+        <span style="margin-top:-20px;"><b>User Account:</b></span></h4>
+    </div>
+    <ul class="nav navbar-nav navbar-right" >
+       <li>
+          <div id="imaginary_container" style="margin-top:20px;"> 
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" >
+                    <span class="input-group-addon">
+                        <button type="submit" >
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                     
+               
+                </div>
+            </div>
+        </li>
+       
+      </ul>
+ 
+</nav>
+</div>
+
+  <div class="innerTable">
+    <table class="table table-striped">
+        <thead>
+      <tr>
+        <th>
+        <input   type="checkbox"  #cbhead disabled></th>
+          <th>NAME</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>ROLE(USER)</th>
+        <th>ZIPCODE</th>
+        <th>CREATED ON</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let user of users | paginate: { itemsPerPage: recordsPerPage, currentPage: p }" >
+        <td>
+          
+          <label class="container">
+          <input  id="{{user.userid}}" type="checkbox">
+        
+          <span class="checkmark"></span></label>
+        </td>
+        <td>{{user.firstname}} {{user.lastname}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.emailid}}</td>
+        <td>{{user.userrole}}</td>
+        <td>{{user.zipcode}}</td>
+        <td>{{user.createdat * 1000 | date }} </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div class="footer">
+
+  <nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+
+
+
+<button type="submit" class="btn btn-default btn-sm" style="background-color:#6AFB92;color:white;border-color:#6AFB92">
+          <span class="glyphicon glyphicon-edit"></span> EDIT</button>
+
+
+<button type="submit" class="btn btn-default btn-sm" style="background-color:#990012;color:white;border-color:#990012">
+          <span class="glyphicon glyphicon-remove"></span> DELETE</button>
+
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li>
+          <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+        </li>
+      <li>
+          <span>   Records Per Page</span> 
+ 
+  <select [(ngModel)]="recordsPerPage">
+  <option value="15">15</option>
+  <option value="30">30</option>
+  <option value="45">45</option>
+  
+</select>
+        </li>  
+    </ul>
+  </div>
+</nav>
+  
+  
+</div>
+  </div>
+   
+
+
+
+
+
+  </div> 
+
+  </body>
+</html>

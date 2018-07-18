@@ -1,0 +1,6 @@
+projectKey=angular-demo
+serverUrl=http://172.27.59.151:9013
+serverVersion=6.7.2.37468
+dashboardUrl=http://172.27.59.151:9013/dashboard/index/angular-demo
+ceTaskId=AWSsrsJ3TisEWZLrx4Ns
+ceTaskUrl=http://172.27.59.151:9013/api/ce/task?id=AWSsrsJ3TisEWZLrx4Ns
